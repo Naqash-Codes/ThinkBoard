@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 5001;
 // middleware
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: process.env.FRONTEND_URL,
   }),
 );
 app.use(express.json()); //this middleware will parse JSON body; req.body
